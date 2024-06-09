@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran | Pesantren Nurul Hidayah</title>
+    <link rel="stylesheet" href="./../css/form.css">
+    <!-- <link rel="stylesheet" href="./../css/reset.css"> -->
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <form style="position: relative;">
+        <div class="form-group">
+            <label for="nama">Nama</label>
+            <input placeholder="Contoh: Sri Yulianingsih" type="text" id="nama" name="nama">
+        </div>
+        <div class="form-group">
+            <label for="usia">Usia</label>
+            <input placeholder="Contoh: 15" type="number" id="usia" name="usia">
+        </div>
+        <div class="form-group">
+            <label for="jenis-kelamin">Jenis Kelamin</label>
+            <select id="jenis-kelamin" name="jenis-kelamin">
+                <option value="pria">Pria</option>
+                <option value="wanita">Wanita</option>
+                <option value="lainnya">Lainnya</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <textarea placeholder="Contoh: Kab.Garut, Kec.Samarang, Des.Mekarmukti, Kp.CintaAsih, 03/07" id="alamat" name="alamat"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="akta-kelahiran">Fotokopi Akta Kelahiran</label>
+            <input type="file" id="akta-kelahiran" name="akta-kelahiran">
+        </div>
+        <div class="form-group">
+            <label for="kartu-keluarga">Fotokopi Kartu Keluarga</label>
+            <input type="file" id="kartu-keluarga" name="kartu-keluarga">
+        </div>
+        <div class="form-group">
+            <label for="ijazah">Ijazah Terakhir (jika ada)</label>
+            <input type="file" id="ijazah" name="ijazah">
+        </div>
+        <div class="form-group">
+            <label for="pas-foto">Pas Foto Berwarna Ukuran 3x4 (3 lembar)</label>
+            <input type="file" id="pas-foto" name="pas-foto" multiple>
+        </div>
+        <div class="form-group">
+            <label for="surat-sehat">Surat Keterangan Sehat dari Dokter</label>
+            <input type="file" id="surat-sehat" name="surat-sehat">
+        </div>
+        <div style="display: flex; width: 100%; justify-content: space-between;">
+            <button class="back" type="submit"><a href="./../index.html" style="color: white; text-decoration: none;">Kembali</a></button>
+            <div>
+                <button class="batal" type="submit">Batal</button>
+                <button class="kirim" type="submit">Kirim</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./../css/admin.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#dashboard" onclick="showSection('dashboard')">Dashboard</a></li>
+                <li><a href="#pendaftar" onclick="showSection('pendaftar')">Manajemen Pendaftar</a></li>
+                <li><a href="#verifikasi" onclick="showSection('verifikasi')">Verifikasi Dokumen</a></li>
+                <li><a href="#laporan" onclick="showSection('laporan')">Laporan dan Statistik</a></li>
+                <li><a href="#pengaturan" onclick="showSection('pengaturan')">Pengaturan Sistem</a></li>
+                <li style="background-color: rgb(118, 62, 62); border-radius: 4px;"><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <header>
+                <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+                <h1>Admin Dashboard</h1>
+            </header>
+            <section id="dashboard" class="section active">
+                <h2>Dashboard</h2>
+                <p>Welcome to the admin dashboard! Here you can manage all the information about the registrations.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </section>
+            <section id="pendaftar" class="section">
+                <h2>Manajemen Pendaftar</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Usia</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Alamat</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>30</td>
+                            <td>Pria</td>
+                            <td>Lorem ipsum dolor sit amet</td>
+                            <td>
+                                <button class="btn edit">Edit</button>
+                                <button class="btn delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>25</td>
+                            <td>Wanita</td>
+                            <td>Lorem ipsum dolor sit amet</td>
+                            <td>
+                                <button class="btn edit">Edit</button>
+                                <button class="btn delete">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="verifikasi" class="section">
+                <h2>Verifikasi Dokumen</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </section>
+            <section id="laporan" class="section">
+                <h2>Laporan dan Statistik</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </section>
+            <section id="pengaturan" class="section">
+                <h2>Pengaturan Sistem</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </section>
+        </main>
+    </div>
+    <script src="./../js/admin.js"></script>
+</body>
+
+</html>
