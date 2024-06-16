@@ -38,3 +38,16 @@ menuToggle.addEventListener('click', function() {
         window.addEventListener('hashchange', loadContent);
         // Load content on initial page load
         window.addEventListener('load', loadContent);
+
+// untuk title 
+document.addEventListener("DOMContentLoaded", function() {
+    let title = "Pondok Pesantren Nurul Hidayah";
+    let index = 0;
+
+    function moveTitle() {
+        document.title = title.slice(index) + " " + title.slice(0, index);
+        index = (index + 1) % title.length;
+    }
+
+    setInterval(moveTitle, 200); // Mengubah teks title setiap 200ms
+});

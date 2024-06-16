@@ -1,46 +1,10 @@
 body {
   overflow-x: hidden;
 }
-.container-hero {
-  background-image: url(../image/ponpes.png);
-  width: 100%;
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: center;
-  padding-block: 40px;
-  .welcome {
-    height: 100%;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-transform: capitalize;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    div, a {
-        border-radius: 10px;
-        padding: 20px;
-        background-color: rgba(155, 167, 165, 0.5);
-        text-decoration: none;
-        color: black;
-        border: 0.5px solid #5effa96f;
-        }
-        a:hover {
-            background-color: rgba(155, 253, 236, 0.5);
-            transition: all 0.5s;
-        }
-        div {
-            margin-inline: 20px;
-        }
-  }
-}
 h1 {
   font-size: 30px;
   text-align: center;
   font-weight: bold;
-  color: #02391b;
   padding-block: 40px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -52,19 +16,67 @@ h1 {
   padding-top: 30px;
 }
 main {
-    background: rgb(54, 220, 140);
-    background: linear-gradient(90deg, rgba(54, 220, 140, 1) 20%, rgba(73, 255, 230, 1) 100%);
     padding-top: 50px;
+}
+.container-hero {
+    background: #E3FEF7;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column-reverse;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .welcome {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 30px;
+        div {
+            text-transform: capitalize;
+            text-align: center;
+            line-height: 40px;
+            color: #003C43;
+            font-weight: 700;
+        }
+
+        a {
+            background: #003C43;
+            width: 90px;
+            height: 40px;
+            text-decoration: none;
+            color: #E3FEF7;
+            text-transform: capitalize;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
     }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 50%;
+    }
+}
+.container-sejarah {
+    padding-bottom: 40px;
+    background-color: #135D66;
+    color: #E3FEF7;
+}
 footer {
-    background-color: #36dc8c;
+    background-color: #003C43;
     box-shadow: -1px 0 20px #000;
+    color: #E3FEF7;
     padding-bottom: 20px;
 }
 h2 {
   font-size: 20px;
   font-weight: 700;
-  color: #02391b;
   font-family: Arial, Helvetica, sans-serif;
 }
 h3 {
@@ -83,6 +95,12 @@ ol li {
 .sesi {
   margin-bottom: 20px;
 }
+.container-program {
+    background-color: #77B0AA;
+    h1 {
+        color: #003C43;
+    }
+}
 .container-pg {
     display: flex;
     flex-wrap: wrap;
@@ -90,7 +108,8 @@ ol li {
 .program-gallery {
     max-width: 800px;
     margin: 10px;
-    background-color: #c1ffde;
+    background-color: #D9D9D9;
+    color: #0F6436;
     padding: 20px;
     border-radius: 10px;
     border: 1px solid rgba(0, 128, 0, 0.407);
@@ -112,6 +131,8 @@ ol li {
     border-radius: 5px;
 }
 #pendaftaran {
+    background-color: #E3FEF7;
+    color: #003C43;
     padding-bottom: 40px;
     h2 {
         margin-block: 15px;
@@ -122,35 +143,25 @@ ol li {
         margin-top: 5px;
     }
 }
+.konten-kontak {
+    padding-bottom: 30px;
+}
 .konten-kontak h6 {
     margin: 10px 0 30px;
+    font-size: 16px;
 }
 .c-a {
     display: flex;
     width: 100%;
     margin-top: 10px;
+    gap: 20px;
+    margin-left: 10px;
 }
-.p-ac {
-    width: 20%;
+.p-ac i{
+    font-size: 25px;
 }
 .p-ac-c {
-    width: 80%;
-}
-/* Responsive navbar styles */
-.nav-mobile {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #36dc8c;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-}
-
-.nav-mobile a {
-    padding: 10px 0;
+    font-size: 16px;
 }
 
 /* untuk ukuran tablet keatas */
@@ -161,10 +172,118 @@ ol li {
         flex-wrap: wrap;
     }
     .program-gallery {
-        width: 40%;
+        max-width: 300px;
         margin: 20px;
         }
     .container-hero {
-        height: 600px;
+        background: #E3FEF7;
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        .welcome {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            div {
+                font-size: 4em;
+                padding-left: 100px;
+                text-transform: capitalize;
+                line-height: 100px;
+                color: #003C43;
+                font-weight: 700;
+            }
+
+            a {
+                margin-left: 70px;
+                background: #003C43;
+                font-size: 2em;
+                width: 150px;
+                height: 60px;
+                text-decoration: none;
+                color: #E3FEF7;
+                text-transform: capitalize;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 15px;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            width: 50%;
+        }
     }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
     }
+    h1 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    ol li {
+        margin-left: 40px;
+        font-size: 25px;
+    }
+
+    .misi,
+    .visi,
+    .vimi {
+        margin-top: 20px;
+    }
+    .container-sesivi {
+        margin-inline: 30px;
+        padding-bottom: 30px;
+        .container-sesi,.container-visi div {
+            font-size: 25px;
+        }
+    }
+    .container-pendaftaran {
+        div, ul li {
+            font-size: 25px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+    }
+    .sesi {
+        margin-bottom: 20px;
+    }
+
+    .konten-kontak {
+        margin-left: 40px;
+        h6 {
+                margin: 10px 0 30px;
+                font-size: 25px;
+            }
+    }
+    .c-a {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 30px;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    .p-ac i {
+        font-size: 40px;
+    }
+    .p-ac-c {
+        font-size: 25px;
+    }
+    footer {
+        padding-bottom: 40px;
+    }
+}

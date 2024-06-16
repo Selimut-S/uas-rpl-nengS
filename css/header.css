@@ -1,113 +1,124 @@
 /* navbar */
 nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #36dc8c;
-    /* padding: 20px 0; */
-    color: blueviolet;
-    height: 50px;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    font-weight: 700;
-    box-shadow: 2px 0 10px #000;
+  display: flex;
+  justify-content: space-around;
+  background-color: #003c43;
+  /* padding: 20px 0; */
+  color: white;
+  height: 50px;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  box-shadow: 2px 0 10px #000;
 }
 nav .logo {
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  img {
+    object-fit: contain;
+    width: 30px;
+  }
 }
 nav ul {
-    display: flex;
-    list-style: none; /*menghapus tanda list  atau titik*/
-    width: 40%;
-    justify-content: space-between;
+  display: flex;
+  list-style: none; /*menghapus tanda list  atau titik*/
+  width: 40%;
+  justify-content: space-between;
 }
 nav ul li a {
-    color: blueviolet;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 nav ul li a:hover {
-    color: burlywood;
-    transition: all .5s;
+  color: burlywood;
+  transition: all 0.5s;
 }
 
 /* menu-toggle menu */
 .menu-toggle {
-    display: none;
-    flex-direction: column;
-    height: 20px;
-    justify-content: space-between;
-    position: relative;
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
 }
 .menu-toggle input {
-    position: absolute;
-    width: 70px;
-    height: 22px;
-    top: -1px;
-    left: -25px;
-    opacity: 0%;
-    cursor: pointer;
-    z-index: 2;
+  position: absolute;
+  width: 70px;
+  height: 22px;
+  top: -1px;
+  left: -25px;
+  opacity: 0%;
+  cursor: pointer;
+  z-index: 2;
 }
 .menu-toggle span {
-    display: block; 
-    width: 20px;
-    height: 3px;
-    background-color: blueviolet;
-    border-radius: 3px;
-    transition: all 0.7s;
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.7s;
 }
 
 /* menu-toggle span animasi */
 .menu-toggle span:nth-child(2) {
-    transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 .menu-toggle span:last-child {
-    transform-origin: 0 100%;
+  transform-origin: 0 100%;
 }
 .menu-toggle input:checked ~ span:nth-child(2) {
-    background-color: blueviolet;
-    transform: rotate(45deg) translate(0.9px, 1.5px);
+  background-color: white;
+  transform: rotate(45deg) translate(0.9px, 1.5px);
 }
-.menu-toggle input:checked ~ span:last-child{
-    background-color: blueviolet;
-    transform: rotate(-45deg) translate(1.5px, -1.8px);
+.menu-toggle input:checked ~ span:last-child {
+  background-color: white;
+  transform: rotate(-45deg) translate(1.5px, -1.8px);
 }
-.menu-toggle input:checked ~ span:nth-child(3){
-    opacity: 0;
-    transform: scale(0);
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
 }
 /* responsif breakpoint */
 /* ukuran tablet */
 @media screen and (max-width: 768px) {
-    nav ul {
-        width: 50%;
-    }
+  nav ul {
+    width: 50%;
+  }
 }
 /* ukuran mobile */
 @media screen and (max-width: 576px) {
-    nav ul {
-        right: 0;
-        top: 0;
-        position: absolute;
-        flex-direction: column;
-        height: 50vh;
-      background-color: #36dc8c;
-        justify-content: space-evenly;
-        align-items: end;
-        padding-right: 10px;
-        z-index: -1;
-        width: 40%;
-        transform: translateX(100%);
-        transition: all 0.8s;
-        opacity: 0;
-        border-bottom-left-radius: 30px;
+    nav {
+  font-size: 1em;
     }
-    nav ul.slide {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    .menu-toggle {
-        display: flex;
-    }
+  nav ul {
+    right: 0;
+    top: 0;
+    position: absolute;
+    flex-direction: column;
+    height: 50vh;
+    background-color: #003c43;
+    justify-content: space-evenly;
+    align-items: end;
+    padding-right: 10px;
+    z-index: 1;
+    width: 40%;
+    transform: translateX(100%);
+    transition: all 0.8s;
+    opacity: 0;
+    border-bottom-left-radius: 30px;
+  }
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .menu-toggle {
+    z-index: 5;
+    display: flex;
+  }
 }
